@@ -3,6 +3,8 @@
 '''
 Pseudocode:
 FUNCTION find_max(numbers):
+    IF numbers are empty:
+        RETURN None
     max_value = first element of numbers
     FOR each number in numbers (starting from second element):
         IF number > max_value:

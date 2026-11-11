@@ -2,13 +2,13 @@
 
 '''
 Pseudocode:
-FUNCTION find_min(numbers):
-    IF numbers are empty:
+FUNCTION find_min(list):
+    IF list is empty:
         RETURN None
-    min_value = first element of numbers
-    FOR each number in numbers (starting from second element):
-        IF number < min_value:
-            min_value = number
+    SET max_value to the first item
+    FOR EACH item in the list (starting from 2nd element):
+        IF item < min_value:
+            SET min_value to item
     RETURN min_value
 '''
 
@@ -24,3 +24,7 @@ def find_min(numbers):
     return min_value
 
 print(find_min([45, 78, 0, 91, -5]))
+
+
+# Time: O(n), because the loop traverse the entire list
+# Space: O(1), only using 2 variables (min_value, number)

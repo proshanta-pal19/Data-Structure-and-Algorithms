@@ -2,13 +2,13 @@
 
 '''
 Pseudocode:
-FUNCTION find_max(numbers):
-    IF numbers are empty:
+FUNCTION find_max(list):
+    IF list is empty:
         RETURN None
-    max_value = first element of numbers
-    FOR each number in numbers (starting from second element):
-        IF number > max_value:
-            max_value = number
+    SET max_value to the first item
+    FOR EACH item in the list (starting from 2nd element):
+        IF item > max_value:
+            SET max_value to item
     RETURN max_value
 '''
 
@@ -24,3 +24,7 @@ def find_max(numbers):
     return max_value
 
 print(find_max([45, 78, 62, 91, 55]))
+
+
+# Time: O(n), because the loop traverse the entire list
+# Space: O(1), only using 2 variables (max_value, number)

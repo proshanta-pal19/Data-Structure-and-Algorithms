@@ -3,9 +3,11 @@
 '''
 Pseudocode:
 FUNCTION count_digits(number):
-    SET count as 0
-    IF number is 0:
+    SET count to 0
+
+    IF number to 0:
         RETURN 1
+        
     WHILE(number > 0):
         SET count to count+1
         SET number to number/10 (integer)

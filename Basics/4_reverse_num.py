@@ -3,10 +3,12 @@
 '''
 Pseudocode:
 FUNCTION reverse_num(number):
-    SET rev as 0
+    SET rev to 0
     SET isNeg to number < 0
+
     IF isNeg:
         SET number to absolute value of number 
+
     WHILE(n > 0):
         SET lastdigit to number%10
         SET rev to (rev * 10) + lastdigit

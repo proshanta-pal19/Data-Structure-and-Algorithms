@@ -7,9 +7,9 @@ FUNCTION count_digits(number):
 
     IF number to 0:
         RETURN 1
-        
+
     WHILE(number > 0):
-        SET count to count+1
+        SET count to one step forward
         SET number to number/10 (integer)
     RETURN count
 '''

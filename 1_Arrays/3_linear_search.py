@@ -3,7 +3,7 @@
 '''
 Pseudocode:
 FUNCTION linear_search(arr, target):
-    FOR i from 0 to size of arr:
+    FOR i from 0 to (size of arr - 1):
         IF arr[i] is equals to target:
             RETURN i
     

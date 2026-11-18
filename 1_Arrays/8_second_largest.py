@@ -91,3 +91,54 @@ print(second_largest_v2([]))
 
 # Time: O(n), because loop traverse twice (individually ~ roughly 2n times)
 # Space: O(1), only using 2 variables (largest, secLargest) 
+
+'''
+Pseudocode: (optimal)
+FUNCTION second_largest_v3(arr):
+    IF length of arr < 2:
+        RETURN None
+
+    SET largest to the first element of the arr
+    SET secLargest to negative infinity
+
+    FOR i from 1 to (size of arr - 1):
+        IF arr[i] > largest:
+            SET secLargest to largest
+            SET largest to arr[i]
+        ELIF arr[i] < largest AND arr[i] > secLargest:
+            SET secLargest to arr[i]
+            
+    IF secLargest is still negative infinity:
+        RETURN None
+    RETURN secLargest
+'''
+
+def second_largest_v3(numbers):
+    if len(numbers) < 2:
+        return None
+
+    largest = numbers[0]
+    secLargest = -math.inf
+
+    for i in range(1, len(numbers)):
+        if numbers[i] > largest:
+            secLargest = largest
+            largest = numbers[i]
+        elif numbers[i] < largest and numbers[i] > secLargest:
+            secLargest = numbers[i]
+
+    if secLargest == -math.inf:
+        return None
+    return secLargest
+
+print(second_largest_v3([7, 8, 4, 8, 5]))
+print(second_largest_v3([6, 6, 6]))
+print(second_largest_v3([6, 8, 8]))
+print(second_largest_v3([6]))
+print(second_largest_v3([-5, -2, -9]))
+print(second_largest_v3([0, -1]))
+print(second_largest_v3([5, -2, -1, 0, 7]))
+print(second_largest_v3([]))
+
+# Time: O(n), because loop traverse only once
+# Space: O(1), using only 2 variables (largest, secLargest)

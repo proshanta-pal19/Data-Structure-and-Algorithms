@@ -38,7 +38,7 @@ print(second_largest([-5, -2, -9]))
 print(second_largest([0, -1]))
 print(second_largest([]))
 
-# Time: O(nlogn), sorting the array requires n*logn times while backward iterations takes roughly n times. So, O(nlogn) + O(n) ~ O(nlogn)
+# Time: O(nlogn), sorting the array requires n*logn operations while backward iterations takes roughly n operations. So, O(nlogn) + O(n) ~ O(nlogn)
 # Space: O(n), because creating a new array to stored the sorted element of an array
 
 '''

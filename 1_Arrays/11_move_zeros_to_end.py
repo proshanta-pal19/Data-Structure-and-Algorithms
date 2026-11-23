@@ -90,3 +90,36 @@ print(move_zeroes_v2([]))
 
 # Time: O(n), because the 1st traversal places non-zero values and 2nd traversal fills the remaining positions with 0's
 # Space: O(1), because the array is modified in-place using pos variable, no extra array is used here
+
+'''
+Pseudocode: (optimal)
+FUNCTION move_zeroes_v3(arr):
+    SET pos to 0
+
+    FOR i from 0 to (size of arr - 1):
+        IF arr[i] != 0:
+            SWAP arr[i] and arr[pos]
+            SET pos one step forward
+
+    RETURN arr 
+'''
+
+def move_zeroes_v3(numbers):
+    pos = 0
+
+    for i in range(len(numbers)):
+        if numbers[i] != 0:
+            numbers[i], numbers[pos] = numbers[pos], numbers[i]
+            pos += 1
+
+    return numbers
+
+print(move_zeroes_v3([0, 1, 0, 3, 12]))
+print(move_zeroes_v3([4, -6, 0, 1, 5]))
+print(move_zeroes_v3([0, 1, 0]))
+print(move_zeroes_v3([0, 0, 0]))
+print(move_zeroes_v3([1, 0, -1]))
+print(move_zeroes_v3([]))
+
+# Time: O(n), because the loop traverse every element only once
+# Space: O(1), only using 2 variable as two-pointer (pos, i)

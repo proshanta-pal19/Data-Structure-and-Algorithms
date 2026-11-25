@@ -57,3 +57,35 @@ print(contains_duplicate_v2([]))
 
 # Time: O(n*logn), because sorts the array takes n*logn steps
 # Space: O(1), sort() function sorted in place, so no copy is made.
+
+'''
+Pseudocode: (optimal) - using hash set
+FUNCTION contains_duplicate_v3(arr):
+    SET seen as an empty set
+
+    FOR value IN arr:
+        IF value IN seen:
+            RETURN True
+        APPEND the value to seen
+    RETURN False
+'''
+
+def contains_duplicate_v3(numbers):
+    seen = set()
+
+    for value in numbers:
+        if value in seen:
+            return True
+        seen.add(value)
+    return False
+
+print(contains_duplicate_v3([2, 4, 5, 4, 1]))
+print(contains_duplicate_v3([8, 3, 10, 7]))
+print(contains_duplicate_v3([1, 0, -1, 0]))
+print(contains_duplicate_v3([3, 0, -5, 5]))
+print(contains_duplicate_v3([-3, -7, -5, -7]))
+print(contains_duplicate_v3([5]))
+print(contains_duplicate_v3([]))
+
+# Time: O(n), because the loop traverse only once ~ rougly n steps
+# Space: O(n), the set store all elements in array in worst case ~ rougly n steps

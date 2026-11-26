@@ -26,7 +26,7 @@ print(contains_duplicate([5]))
 print(contains_duplicate([]))
 
 # Time: O(n*n), because 2 nested loops goes through the entire array ~ roughly n*n operations
-# Space: O(1), only using loop variable i which forgotten after checking each pair
+# Space: O(1), only using loop variable i, j which forgotten after checking each pair
 
 '''
 Pseudocode: (better)

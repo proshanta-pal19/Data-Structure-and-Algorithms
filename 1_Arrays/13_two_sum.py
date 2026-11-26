@@ -56,7 +56,7 @@ FUNCTION two_sum_better(arr, target):
     RETURN []
 '''
 
-def two_sum_better(arr, target):
+def two_sum_better(arr: List[int], target: int) -> List[int]:
     pairs = [(elem, i) for i, elem in enumerate(arr)]
     pairs.sort()
 
@@ -81,3 +81,39 @@ print(two_sum_better([0, 0, 0], 0))
 
 # Time: O(n*nlogn), because sorting the value-index pairs requiring n*logn time
 # Space: O(n), because one value-pair is stored for every array element ~ roughly n steps
+
+
+'''
+Pseudocode: (optimal) - hash map
+FUNCTION two_sum_optimal(arr, target): 
+    SET seen as an empty dictionary
+
+    FOR i, value IN arr:
+        SET partner to (target - value)
+
+        IF partner IN seen:
+            RETURN [seen[partner], i]
+        
+        SET seen[value] to i
+    RETURN []
+'''
+
+def two_sum_optimal(arr: List[int], target: int) -> List[int]:
+    seen = dict()
+
+    for i, value in enumerate(arr):
+        partner = target - value
+
+        if partner in seen:
+            return [seen[partner], i]
+
+        seen[value] = i
+    return []
+
+print(two_sum_optimal([4, 2, 6, 1, 10], 8))
+print(two_sum_optimal([1, 2, 4, 3, 4], 10))
+print(two_sum_optimal([5, 1, -3, 0, -9], -9))
+print(two_sum_optimal([0, 0, 0], 0))
+
+# Time: O(n), because the loop traverse once ~ roughly n steps
+# Space: O(n), the dictionary seen holds all elements in array before the pair is found in worst case 

@@ -2,7 +2,7 @@
 
 # A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself. 
 
-# Constrainst: 1 <= n <= 10^8
+# Constraints: 1 <= n <= 10^8
 
 '''
 Pseudocode: (brute)
@@ -37,7 +37,7 @@ print(perfect_num_brute(1))
 print(perfect_num_brute(8128)) 
 
 # Time: O(n), because the loop traverse entire array except 1st element ~ roughly n steps
-# Space: O(1), using only 2 variables (divisors_sum, i)
+# Space: O(1), using only 1 variable (divisors_sum)
 
 
 '''
@@ -83,4 +83,4 @@ print(perfect_num_optimal(1))
 print(perfect_num_optimal(8128)) 
 
 # Time: O(sqrt(n)), because the loop runs upto the square root of the number
-# Space: O(1), using only 2 variabels (divisors_sum, i) 
+# Space: O(1), using only 1 variable (divisors_sum) 

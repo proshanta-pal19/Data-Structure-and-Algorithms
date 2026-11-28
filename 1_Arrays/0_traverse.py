@@ -7,7 +7,9 @@ FUNCTION traverse(arr):
         PRINT arr[i]
 '''
 
-def traverse(arr):
+from typing import List
+
+def traverse(arr: List[int]) -> None:
     for i in range(len(arr)):
         print(arr[i])
 

@@ -8,7 +8,9 @@ FUNCTION access_elem(arr, index):
     RETURN arr[index]
 '''
 
-def access_elem(arr, index):
+from typing import List
+
+def access_elem(arr: List[int], index: int) -> int:
     if index < 0 or index >= len(arr):
         return 'Invalid index'
     return arr[index]

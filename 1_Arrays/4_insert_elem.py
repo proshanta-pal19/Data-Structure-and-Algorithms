@@ -10,8 +10,10 @@ FUNCTION insert_elem(arr, index, value):
     RETURN arr
 '''
 
-def insert_elem(arr, index, value):
-    arr.append(None)
+from typing import List
+
+def insert_elem(arr: List[int], index: int, value: int) -> List[int] :
+    arr.append(-1)
     for i in range(len(arr) - 1, index, -1):
         arr[i] = arr[i-1]
     arr[index] = value

@@ -9,7 +9,9 @@ FUNCTION delete_elem(arr, index):
     RETURN arr
 '''
 
-def delete_elem(arr, index):
+from typing import List
+
+def delete_elem(arr: List[int], index: int) -> List[int]:
     for i in range(index, len(arr) - 1):
         arr[i] = arr[i+1]
     arr.pop()

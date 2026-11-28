@@ -9,7 +9,9 @@ FUNCTION update_elem(arr, index, value):
     RETURN arr
 '''
 
-def update_elem(arr, index, value):
+from typing import List
+
+def update_elem(arr: List[int], index: int, value: int) -> List[int]:
     if index < 0 or index >= len(arr):
         return 'Invalid index'
     arr[index] = value

@@ -10,7 +10,9 @@ FUNCTION linear_search(arr, target):
     RETURN -1
 '''
 
-def linear_search(arr, target):
+from typing import List
+
+def linear_search(arr: List[int], target: int) -> int:
     for i in range(len(arr)):
         if arr[i] == target:
             return i
